@@ -36,7 +36,7 @@
 #include "strings.h"
 #ifndef streamlib_streams_h
 #define streamlib_streams_h
-#define streamlib_version 2
+#define streamlib_version 4
 extern const int GLOBAL_STREAMLIB_VERSION;
 bool check_version_compadible(void);
 #endif

@@ -31,7 +31,7 @@
  for. Thank you and happy programming with streamlib.
  */
 #include "streams.h"
-const int GLOBAL_STREAMLIB_VERSION = 2;
+const int GLOBAL_STREAMLIB_VERSION = 4;
 bool check_version_compadible(void)
 {
     if (streamlib_version == GLOBAL_STREAMLIB_VERSION)
