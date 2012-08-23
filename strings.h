@@ -30,11 +30,10 @@
  hesitate to contact any developer and talk to us, that is what we are here
  for. Thank you and happy programming with streamlib.
  */
-#include "streams.h"
-const int GLOBAL_STREAMLIB_VERSION = 2;
-bool check_version_compadible(void)
-{
-    if (streamlib_version == GLOBAL_STREAMLIB_VERSION)
-        return true;
-    return false;
-}
+#ifndef streamlib_strings_h
+#define streamlib_strings_h
+void strcat(std::string &, const char *);
+void strcat(char *, std::string);
+void strocpy(char *, char *, int);
+const char * itocc(int);
+#endif

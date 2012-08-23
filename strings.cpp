@@ -31,10 +31,28 @@
  for. Thank you and happy programming with streamlib.
  */
 #include "streams.h"
-const int GLOBAL_STREAMLIB_VERSION = 2;
-bool check_version_compadible(void)
+void strcat(std::string dest, const char * source)
 {
-    if (streamlib_version == GLOBAL_STREAMLIB_VERSION)
-        return true;
-    return false;
+    dest += source;
+}
+void strcat(char * dest, std::string source)
+{
+    strcat(dest, source.c_str());
+}
+void strocpy(char * dest, char * source, int offset)
+{
+    int length = (int)strlen(source);
+    if (offset < length && offset > -1)
+    {
+        for (int i = offset; i < length; i++)
+        {
+            dest[i - offset] = source[i];
+        }
+    }
+}
+const char * itocc(int input)
+{
+    std::ostringstream t;
+    t << input;
+    return t.str().c_str();
 }

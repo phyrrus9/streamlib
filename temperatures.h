@@ -30,11 +30,80 @@
  hesitate to contact any developer and talk to us, that is what we are here
  for. Thank you and happy programming with streamlib.
  */
-#include "streams.h"
-const int GLOBAL_STREAMLIB_VERSION = 2;
-bool check_version_compadible(void)
+#ifndef streamlib_temperatures_h
+#define streamlib_temperatures_h
+namespace temperature
 {
-    if (streamlib_version == GLOBAL_STREAMLIB_VERSION)
-        return true;
-    return false;
+    class celsius;
+    class farenhiet;
+    class kelvin
+    {
+        int temperature;
+    public:
+        void operator=(int);
+        void operator=(kelvin);
+        void operator+=(int);
+        void operator+=(kelvin);
+        //
+        void operator-=(kelvin);
+        void operator*=(kelvin);
+        void operator/=(kelvin);
+        kelvin operator-(kelvin);
+        kelvin operator*(kelvin);
+        kelvin operator/(kelvin);
+        //
+        kelvin operator+(kelvin);
+        celsius tocelsius(void);
+        farenhiet tofarenhiet(void);
+        int get(void);
+    };
+    class celsius
+    {
+        int temperature;
+    public:
+        void operator=(int);
+        void operator=(celsius);
+        void operator+=(int);
+        void operator+=(celsius);
+        //
+        void operator-=(celsius);
+        void operator*=(celsius);
+        void operator/=(celsius);
+        celsius operator-(celsius);
+        celsius operator*(celsius);
+        celsius operator/(celsius);
+        //
+        celsius operator+(celsius);
+        kelvin tokelvin(void);
+        farenhiet tofarenhiet(void);
+        int get(void);
+    };
+    class farenhiet
+    {
+        int temperature;
+    public:
+        void operator=(int);
+        void operator=(farenhiet);
+        void operator+=(int);
+        void operator+=(farenhiet);
+        //
+        void operator-=(farenhiet);
+        void operator*=(farenhiet);
+        void operator/=(farenhiet);
+        farenhiet operator-(farenhiet);
+        farenhiet operator*(farenhiet);
+        farenhiet operator/(farenhiet);
+        //
+        farenhiet operator+(farenhiet);
+        kelvin tokelvin(void);
+        celsius tocelsius(void);
+        int get(void);
+    };
+    int ctof(int); //celsius to farenhiet
+    int ftoc(int); //farenhiet to celsius
+    int ctok(int); //celsius to kelvin
+    int ktoc(int); //kelvin to celsius
+    int ftok(int); //farenhiet to kelvin
+    int ktof(int); //kelvin to celsius
 }
+#endif

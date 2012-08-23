@@ -32,60 +32,10 @@
  */
 #include <string.h>
 #include <sstream>
+#include "temperatures.h"
+#include "strings.h"
 #ifndef streamlib_streams_h
 #define streamlib_streams_h
-#define streamlib_version 1
-void strcat(std::string &, const char *);
-void strcat(char *, std::string);
-const char * itocc(int);
-namespace temperature
-{
-    class celsius;
-    class farenhiet;
-    class kelvin
-    {
-        int temperature;
-    public:
-        void operator=(int);
-        void operator=(kelvin);
-        void operator+=(int);
-        void operator+=(kelvin);
-        kelvin operator+(kelvin);
-        celsius tocelsius(void);
-        farenhiet tofarenhiet(void);
-        int get(void);
-    };
-    class celsius
-    {
-        int temperature;
-    public:
-        void operator=(int);
-        void operator=(celsius);
-        void operator+=(int);
-        void operator+=(celsius);
-        celsius operator+(celsius);
-        kelvin tokelvin(void);
-        farenhiet tofarenhiet(void);
-        int get(void);
-    };
-    class farenhiet
-    {
-        int temperature;
-    public:
-        void operator=(int);
-        void operator=(farenhiet);
-        void operator+=(int);
-        void operator+=(farenhiet);
-        farenhiet operator+(farenhiet);
-        kelvin tokelvin(void);
-        celsius tocelsius(void);
-        int get(void);
-    };
-    int ctof(int); //celsius to farenhiet
-    int ftoc(int); //farenhiet to celsius
-    int ctok(int); //celsius to kelvin
-    int ktoc(int); //kelvin to celsius
-    int ftok(int); //farenhiet to kelvin
-    int ktof(int); //kelvin to celsius
-}
+#define streamlib_version 2
+bool check_version_compadible(void);
 #endif

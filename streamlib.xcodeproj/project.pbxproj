@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4AC3098815E127B9005F767F /* streams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC3098715E127B9005F767F /* streams.cpp */; };
+		4AC309FC15E66F7F005F767F /* temperatures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC309FB15E66F7F005F767F /* temperatures.cpp */; };
+		4AC309FE15E671C7005F767F /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AC309FD15E671C7005F767F /* strings.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4AC3097F15E1277E005F767F /* libstreamlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libstreamlib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC3098615E127A1005F767F /* streams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = streams.h; sourceTree = "<group>"; };
 		4AC3098715E127B9005F767F /* streams.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = streams.cpp; sourceTree = "<group>"; };
+		4AC309F815E66F35005F767F /* temperatures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = temperatures.h; sourceTree = "<group>"; };
+		4AC309FA15E66F57005F767F /* strings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = strings.h; sourceTree = "<group>"; };
+		4AC309FB15E66F7F005F767F /* temperatures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = temperatures.cpp; sourceTree = "<group>"; };
+		4AC309FD15E671C7005F767F /* strings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strings.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,10 @@
 			children = (
 				4AC3098615E127A1005F767F /* streams.h */,
 				4AC3098715E127B9005F767F /* streams.cpp */,
+				4AC309FD15E671C7005F767F /* strings.cpp */,
+				4AC309F815E66F35005F767F /* temperatures.h */,
+				4AC309FA15E66F57005F767F /* strings.h */,
+				4AC309FB15E66F7F005F767F /* temperatures.cpp */,
 				4AC3098015E1277E005F767F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +116,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC3098815E127B9005F767F /* streams.cpp in Sources */,
+				4AC309FC15E66F7F005F767F /* temperatures.cpp in Sources */,
+				4AC309FE15E671C7005F767F /* strings.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +182,7 @@
 		4AC3098515E1277E005F767F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "";
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -194,6 +207,7 @@
 				4AC3098515E1277E005F767F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
