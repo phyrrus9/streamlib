@@ -34,6 +34,8 @@
 #define streamlib_strings_h
 void strcat(std::string &, const char *);
 void strcat(char *, std::string);
+void strcpy(std::string &, const char *);
+void strcpy(char *, std::string);
 void strocpy(char *, char *, int);
 const char * itocc(int);
 #endif

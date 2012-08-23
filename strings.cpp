@@ -39,15 +39,25 @@ void strcat(char * dest, std::string source)
 {
     strcat(dest, source.c_str());
 }
+void strcpy(std::string & dest, const char * source)
+{
+    dest = source;
+}
+void strcpy(char * dest, std::string source)
+{
+    strcpy(dest, source.c_str());
+}
 void strocpy(char * dest, char * source, int offset)
 {
     int length = (int)strlen(source);
     if (offset < length && offset > -1)
     {
-        for (int i = offset; i < length; i++)
+        int i;
+        for (i = offset; i < length; i++)
         {
             dest[i - offset] = source[i];
         }
+        dest[i - offset] = '\0';
     }
 }
 const char * itocc(int input)
